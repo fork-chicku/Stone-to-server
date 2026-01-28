@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Stone to Server: Hampi Restoration AI",
+  "description": "An expert AI system for architectural analysis and visual restoration of the 14th-century Vijayanagara Empire ruins in Hampi.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

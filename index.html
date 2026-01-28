@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stone to Server: Hampi AI Restoration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600;800&family=Karma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --ink-color: #271c19;
+        --paper-color: #f5efe6;
+        --terracotta: #9a3412;
+        --saffron: #d97706;
+      }
+      
+      body {
+        font-family: 'Karma', serif;
+        background-color: var(--paper-color);
+        /* Hampi Landscape - Boulders and Ruins */
+        background-image: url("https://images.unsplash.com/photo-1599827592534-706f56434455?q=80&w=1920&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center bottom;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        margin: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+        color: var(--ink-color);
+      }
+
+      /* Warm Overlay for the "Golden Era" feel */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(245, 239, 230, 0.85), rgba(231, 213, 190, 0.7));
+        mix-blend-mode: soft-light;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Parchment Texture */
+      body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+        opacity: 0.8;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      #root {
+        position: relative;
+        z-index: 10;
+        min-height: 100vh;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: 'Eczar', serif;
+        font-weight: 700;
+      }
+
+      /* Warm Indian Glass */
+      .glass {
+        background: rgba(253, 251, 247, 0.75);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(154, 52, 18, 0.15);
+        box-shadow: 0 4px 24px rgba(41, 27, 21, 0.08);
+      }
+
+      .dark-glass {
+        background: rgba(39, 28, 25, 0.95);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(217, 119, 6, 0.3);
+      }
+
+      .gradient-text {
+        background: linear-gradient(to right, #7c2d12, #b45309);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Layout Padding */
+      main, header {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+      }
+
+      @media (min-width: 1024px) {
+        main, header {
+          padding-left: 48px !important;
+          padding-right: 48px !important;
+        }
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #e7e5e4;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #9a3412;
+        border-radius: 5px;
+        border: 2px solid #e7e5e4;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
